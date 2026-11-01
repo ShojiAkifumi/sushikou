@@ -167,9 +167,24 @@ ul { padding: 0; list-style: none; }
   border: 1px solid var(--navy); background: transparent; transition: background-color .3s, transform .3s;
 }
 .hero__dot[aria-current="true"]::before { background: var(--navy); transform: scale(1.15); }
+/* 読み込み時のアニメーション：写真はフェードイン、文字は上から現れる */
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes hero-text-in {
+  from { opacity: 0; transform: translateY(-28px); clip-path: inset(-40px -40px 100% -40px); }
+  to   { opacity: 1; transform: none;              clip-path: inset(-40px -40px -40px -40px); }
+}
+.hero__slider { animation: hero-fade 1.6s ease 0.1s both; }
+.hero__title  { animation: hero-text-in 1.4s cubic-bezier(.2, .7, .2, 1) 0.6s both; }
+.hero__sub    { animation: hero-text-in 1.4s cubic-bezier(.2, .7, .2, 1) 1.0s both; }
+.hero__bar    { animation: hero-fade 1s ease 1.5s both; }
+
 @media (prefers-reduced-motion: reduce) {
   .hero__slide { transition: opacity .4s; transform: none; }
   .hero__slide.is-active { transform: none; }
+  .hero__slider, .hero__title, .hero__sub, .hero__bar { animation: none; }
 }
 .hero__title {
   position: absolute; left: 0; top: 0;

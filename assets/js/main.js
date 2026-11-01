@@ -52,7 +52,14 @@
       if (document.hidden) stop(); else start();
     });
 
-    show(0);
-    start();
+    // 1枚目もズームが動くよう、いったん非表示にしてから表示し直す
+    slides[0].style.transition = 'none';
+    slides[0].classList.remove('is-active');
+    void slides[0].offsetWidth; // 初期状態（拡大・透明）を確定させる
+    slides[0].style.transition = '';
+    requestAnimationFrame(function () {
+      show(0);
+      start();
+    });
   });
 })();
