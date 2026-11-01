@@ -176,15 +176,17 @@ ul { padding: 0; list-style: none; }
   from { opacity: 0; transform: translateY(-28px); clip-path: inset(-40px -40px 100% -40px); }
   to   { opacity: 1; transform: none;              clip-path: inset(-40px -40px -40px -40px); }
 }
+/* 順番：写真 → サブコピー → 1秒後に「日本橋の、」→「気軽な江戸前寿司」→ 営業時間 */
 .hero__slider { animation: hero-fade 1.6s ease 0.1s both; }
-.hero__title  { animation: hero-text-in 1.4s cubic-bezier(.2, .7, .2, 1) 0.6s both; }
-.hero__sub    { animation: hero-text-in 1.4s cubic-bezier(.2, .7, .2, 1) 1.0s both; }
-.hero__bar    { animation: hero-fade 1s ease 1.5s both; }
+.hero__sub    { animation: hero-text-in 1.4s cubic-bezier(.2, .7, .2, 1) 0.6s both; }
+.hero__line   { display: block; animation: hero-text-in 1.4s cubic-bezier(.2, .7, .2, 1) 1.6s both; }
+.hero__line + .hero__line { animation-delay: 2.1s; }
+.hero__bar    { animation: hero-fade 1s ease 2.8s both; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__slide { transition: opacity .4s; transform: none; }
   .hero__slide.is-active { transform: none; }
-  .hero__slider, .hero__title, .hero__sub, .hero__bar { animation: none; }
+  .hero__slider, .hero__line, .hero__sub, .hero__bar { animation: none; }
 }
 .hero__title {
   position: absolute; left: 0; top: 0;

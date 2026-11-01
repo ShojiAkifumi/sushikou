@@ -36,7 +36,7 @@ site/
 
 ## 仕様メモ
 - メインビジュアル：店内・握り・店主の3枚を5秒ごとにフェード切替（ドットで選択、スマホはスワイプ可、「視差効果を減らす」設定時は自動再生なし）。間隔は `main.js` の `INTERVAL` で変更
-- 読み込み時：写真がフェードイン、キャッチ→サブコピーの順に文字が上から現れる（`style.css` の `hero-fade` / `hero-text-in`。秒数は各 `animation` の値で調整）
+- 読み込み時：写真がフェードイン → サブコピー → 1秒後にキャッチ1行目 → 2行目の順に文字が上から現れる（`style.css` の `hero-fade` / `hero-text-in`。秒数は各 `animation` の値で調整）
 - ブレイクポイント：820px（以下はスマホ表示。メニュー非表示、画面下に電話／WEB予約の固定ボタン）
 - フォント：Google Fonts（Shippori Mincho B1／Zen Kaku Gothic New／Cormorant Garamond）
 - 画像は `loading="lazy"`、メインビジュアルのみ先読み
