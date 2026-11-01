@@ -91,7 +91,18 @@
 <!-- ================= HERO ================= -->
 <section id="top" class="hero">
   <div class="hero__inner">
-    <img class="hero__photo" src="assets/images/interior.jpg" alt="提灯の灯る、木の温もりある寿司幸の店内" width="1600" height="1067" fetchpriority="high">
+    <div class="hero__slider" data-carousel role="region" aria-roledescription="carousel" aria-label="店内と料理の写真">
+      <div class="hero__slides">
+        <img class="hero__slide is-active" src="assets/images/interior.jpg" alt="提灯の灯る、木の温もりある寿司幸の店内" width="1600" height="1067" fetchpriority="high">
+        <img class="hero__slide" src="assets/images/hero-nigiri.jpg" alt="カウンターに並ぶ握り寿司" width="1600" height="1067" decoding="async">
+        <img class="hero__slide hero__slide--top" src="assets/images/hero-chef.jpg" alt="笑顔で寿司を差し出す店主" width="1600" height="1066" decoding="async">
+      </div>
+      <div class="hero__dots">
+        <button class="hero__dot" type="button" aria-label="1枚目の写真を表示" aria-current="true"></button>
+        <button class="hero__dot" type="button" aria-label="2枚目の写真を表示"></button>
+        <button class="hero__dot" type="button" aria-label="3枚目の写真を表示"></button>
+      </div>
+    </div>
     <h1 class="hero__title">日本橋の、<br>気軽な江戸前寿司</h1>
     <p class="hero__sub">ひとりでも、みんなでも。</p>
   </div>
@@ -461,5 +472,6 @@
   <a class="sp-cta__web" href="[予約ページURL]"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg>WEB予約</a>
 </div>
 
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

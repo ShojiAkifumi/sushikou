@@ -1,6 +1,6 @@
 # 日本橋 寿司幸 LP
 
-静的HTML／CSSのみ（JavaScript・ビルド不要）。`index.html` をブラウザで開けば確認できます。
+静的HTML／CSS＋少量のJavaScript（ビルド不要）。`index.html` をブラウザで開けば確認できます。
 
 ```
 site/
@@ -8,6 +8,7 @@ site/
 ├─ en/index.html       英語ページ
 └─ assets/
    ├─ css/style.css    共通スタイル（色は :root の変数で管理）
+   ├─ js/main.js       メインビジュアルのカルーセル
    └─ images/          写真・ロゴ・ダミー地図・OGP画像
 ```
 
@@ -34,6 +35,7 @@ site/
 `assets/images/washi.jpg`（和紙テクスチャ）を `body` にリピート表示しています。継ぎ目が出ないよう端をなじませて加工済みです。
 
 ## 仕様メモ
+- メインビジュアル：店内・握り・店主の3枚を5秒ごとにフェード切替（ドットで選択、スマホはスワイプ可、「視差効果を減らす」設定時は自動再生なし）。間隔は `main.js` の `INTERVAL` で変更
 - ブレイクポイント：820px（以下はスマホ表示。メニュー非表示、画面下に電話／WEB予約の固定ボタン）
 - フォント：Google Fonts（Shippori Mincho B1／Zen Kaku Gothic New／Cormorant Garamond）
 - 画像は `loading="lazy"`、メインビジュアルのみ先読み
