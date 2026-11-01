@@ -22,7 +22,6 @@ site/
 | 郵便番号・住所 | `〒[XXX-XXXX]`／`[東京都XX区XXXX X-XX-X]` | `[X-XX-X XXXX, XX-ku,]` ほか |
 | 最寄駅・徒歩分数 | `[最寄駅・徒歩◯分：要確認]` | `[Nearest station & walking time: TBC]` |
 | 「地図アプリで開く」リンク | `[Google マップURL]` | `[Google Maps URL]` |
-| テイクアウトメニュー | `[テイクアウトメニュー・価格：要確認]` | `[Takeout menu & prices: TBC]` |
 | Uber Eats / menu | `[Uber Eats 店舗URL]`／`[menu 店舗URL]` | `[Uber Eats URL]`／`[menu URL]` |
 | SNS | `[Instagram URL]`／`[X URL]` | 同左 |
 
