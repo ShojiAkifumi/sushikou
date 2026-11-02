@@ -1,4 +1,4 @@
-# 日本橋 寿司幸 LP
+# 日本橋 寿司倖 LP
 
 静的HTML／CSS＋少量のJavaScript（ビルド不要）。`index.html` をブラウザで開けば確認できます。
 
